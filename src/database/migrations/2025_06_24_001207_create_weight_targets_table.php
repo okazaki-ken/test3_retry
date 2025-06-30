@@ -16,7 +16,7 @@ class CreateWeightTargetsTable extends Migration
         Schema::create('weight_targets', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id');
-            $table->decimal('target_weight',4,1)->default(0);
+            $table->decimal('target_weight',4,1);
             $table->timestamp('created_at')->useCurrent()->nullable();
             $table->timestamp('updated_at')->useCurrent()->nullable();
         });

@@ -16,8 +16,8 @@ class CreateWeightLogsTable extends Migration
         Schema::create('weight_logs', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id');
-            $table->date('date')->default(DB::raw('CURRENT_DATE'));
-            $table->decimal('weight',4,1)->default(0);
+            $table->date('date');
+            $table->decimal('weight',4,1);
             $table->integer('calories')->nullable();
             $table->time('exercise_time')->nullable();
             $table->text('exercise_content')->nullable();
